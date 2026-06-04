@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TokyoDash — Доставка суши по Павлодару</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Tokyo<span>Dash</span></div>
+    <ul class="nav-links">
+      <li><a href="#rolls">Роллы</a></li>
+      <li><a href="#sets">Сеты</a></li>
+      <li><a href="#why">О нас</a></li>
+      <li><a href="#reviews">Отзывы</a></li>
+      <li><a href="#promo">Акции</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">+7 705 317 44 71</div>
+      <button class="nav-order-btn" onclick="smoothScroll('#rolls')">Заказать</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-tag">🚀 Доставка по Павлодару за 60 минут</div>
+      <h1 class="hero-title">Доставка еды<br>из ресторана<br><span>TokyoDash</span></h1>
+      <p class="hero-subtitle">Вкуснейшие роллы и суши с доставкой по Павлодару в течение 60 минут!</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="smoothScroll('#rolls')">Смотреть меню</button>
+        <button class="btn-ghost" onclick="openModal()">Сделать заказ</button>
+      </div>
+    </div>
+    <div class="hero-features">
+      <div class="hero-feature">
+        <div class="hero-feature-icon">🚗</div>
+        <div class="hero-feature-text">Бесплатная доставка по Павлодару</div>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon">🛍</div>
+        <div class="hero-feature-text">Минимальная сумма заказа: 1990 тг</div>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon">🕐</div>
+        <div class="hero-feature-text">Время работы: 11.00 – 00.00</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Заказов в день</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4.9★</div>
+      <div class="stat-label">Рейтинг</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">60 мин</div>
+      <div class="stat-label">Доставка</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3 года</div>
+      <div class="stat-label">На рынке</div>
+    </div>
+  </div>
+</section>
+
+<!-- РОЛЛЫ -->
+<section class="section" id="rolls">
+  <h2 class="section-title reveal">Роллы</h2>
+  <p class="section-subtitle reveal">Только свежие продукты и оригинальные рецепты от японских поваров</p>
+  <div class="product-grid">
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=500&q=80" alt="Сяке рору" class="product-img"/>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Сяке рору</div>
+        <div class="product-desc">Лосось, огурец, рис, нори, 6 шт.</div>
+        <div class="product-footer">
+          <div class="product-price">1290 тг.</div>
+          <button class="order-btn" onclick="addToCart('Сяке рору', 1290)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=600&q=80" alt="Эби рору" class="product-img"/>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Эби рору</div>
+        <div class="product-desc">Креветка, масаго, нори, рис, огурец, 6 шт.</div>
+        <div class="product-footer">
+          <div class="product-price">1790 тг.</div>
+          <button class="order-btn" onclick="addToCart('Эби рору', 1790)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=400&q=80" alt="Урамаки рору" class="product-img"/>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Урамаки рору</div>
+        <div class="product-desc">Лосось, авокадо, сливочный сыр, нори, рис, кунжут, 6 шт.</div>
+        <div class="product-footer">
+          <div class="product-price">1990 тг.</div>
+          <button class="order-btn" onclick="addToCart('Урамаки рору', 1990)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?w=400&q=80" alt="Авокадо маки" class="product-img"/>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Авокадо маки</div>
+        <div class="product-desc">Нори, авокадо, рис, 8 шт.</div>
+        <div class="product-footer">
+          <div class="product-price">1190 тг.</div>
+          <button class="order-btn" onclick="addToCart('Авокадо маки', 1190)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1526069631228-723c945bea6b?w=400&q=80" alt="Филадельфия люкс" class="product-img"/>
+        <div class="product-badge">ХИТ</div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Филадельфия люкс</div>
+        <div class="product-desc">Лосось, тунец, сливочный сыр, нори, рис, огурец, 8 шт.</div>
+        <div class="product-footer">
+          <div class="product-price">2590 тг.</div>
+          <button class="order-btn" onclick="addToCart('Филадельфия люкс', 2590)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=80" alt="Магуро ролл" class="product-img"/>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Магуро ролл</div>
+        <div class="product-desc">Тунец, рис, темпурная крошка, огурец, нори, сливочный сыр, 8 шт.</div>
+        <div class="product-footer">
+          <div class="product-price">2590 тг.</div>
+          <button class="order-btn" onclick="addToCart('Магуро ролл', 2590)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- СЕТЫ -->
+<section class="section section-light" id="sets">
+  <h2 class="section-title reveal">Сеты</h2>
+  <p class="section-subtitle reveal">Вы можете добавить в сет дополнительные роллы и получить на них скидку 10%</p>
+  <div class="product-grid">
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=400&q=80" alt="Маки мини сет" class="product-img"/>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Маки мини сет</div>
+        <div class="product-desc">10 роллов</div>
+        <div class="product-footer">
+          <div class="product-price">8990 тг.</div>
+          <button class="order-btn" onclick="addToCart('Маки мини сет', 8990)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=400&q=80" alt="Классический сет" class="product-img"/>
+        <div class="product-badge">ПОПУЛЯРНЫЙ</div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Классический сет</div>
+        <div class="product-desc">24 ролла</div>
+        <div class="product-footer">
+          <div class="product-price">5999 тг.</div>
+          <button class="order-btn" onclick="addToCart('Классический сет', 5999)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80" alt="Рору сет" class="product-img"/>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Рору сет</div>
+        <div class="product-desc">10 роллов</div>
+        <div class="product-footer">
+          <div class="product-price">3299 тг.</div>
+          <button class="order-btn" onclick="addToCart('Рору сет', 3299)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1548940740-204726a19be3?w=400&q=80" alt="Мураками сет" class="product-img"/>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Мураками сет</div>
+        <div class="product-desc">32 ролла</div>
+        <div class="product-footer">
+          <div class="product-price">5699 тг.</div>
+          <button class="order-btn" onclick="addToCart('Мураками сет', 5699)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1617196035154-1e7e6e28b0db?w=400&q=80" alt="Мексиканский сет" class="product-img"/>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Мексиканский сет</div>
+        <div class="product-desc">32 ролла</div>
+        <div class="product-footer">
+          <div class="product-price">4899 тг.</div>
+          <button class="order-btn" onclick="addToCart('Мексиканский сет', 4899)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="https://images.unsplash.com/photo-1607301405390-d831c242f59b?w=400&q=80" alt="Отори сет" class="product-img"/>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Отори сет</div>
+        <div class="product-desc">24 ролла</div>
+        <div class="product-footer">
+          <div class="product-price">1999 тг.</div>
+          <button class="order-btn" onclick="addToCart('Отори сет', 1999)">+ В корзину</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ПОЧЕМУ МЫ -->
+<section class="section why-section" id="why">
+  <h2 class="section-title reveal" style="color:#fff">Почему выбирают нас</h2>
+  <p class="section-subtitle reveal" style="color:#aaa">Мы готовим с душой и доставляем с заботой</p>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon">🐟</div>
+      <h3>Свежие ингредиенты</h3>
+      <p>Рыба и морепродукты поставляются ежедневно от проверенных поставщиков</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">👨‍🍳</div>
+      <h3>Японские рецепты</h3>
+      <p>Наши повара прошли обучение в Японии и готовят по аутентичным рецептам</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">⚡</div>
+      <h3>Быстрая доставка</h3>
+      <p>Доставляем горячими в течение 60 минут по всему Павлодару</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">💰</div>
+      <h3>Честные цены</h3>
+      <p>Качественные суши по доступным ценам без скрытых наценок</p>
+    </div>
+  </div>
+
+  <!-- Фото галерея -->
+  <div class="gallery reveal">
+    <img src="https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=600&q=80" alt="суши" class="gallery-img"/>
+    <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=80" alt="суши" class="gallery-img gallery-img-tall"/>
+    <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=600&q=80" alt="суши" class="gallery-img"/>
+    <img src="https://images.unsplash.com/photo-1526069631228-723c945bea6b?w=600&q=80" alt="суши" class="gallery-img gallery-img-wide"/>
+    <img src="https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?w=600&q=80" alt="суши" class="gallery-img"/>
+  </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section class="section" id="reviews">
+  <h2 class="section-title reveal">Отзывы гостей</h2>
+  <p class="section-subtitle reveal">Более 2000 довольных клиентов по всему Павлодару</p>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Заказываю уже полгода каждую неделю. Роллы всегда свежие, доставка быстрая. Лучшие суши в Павлодаре!»</p>
+      <div class="review-author">
+        <div class="review-avatar">А</div>
+        <div>
+          <div class="review-name">Айгерим К.</div>
+          <div class="review-date">2 недели назад</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Классический сет на компанию — просто огонь! Всё было свежим, красиво упаковано. Однозначно рекомендую!»</p>
+      <div class="review-author">
+        <div class="review-avatar">Д</div>
+        <div>
+          <div class="review-name">Данияр М.</div>
+          <div class="review-date">1 месяц назад</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Привезли за 45 минут, всё горячее и вкусное. Филадельфия люкс — моя любимая. Спасибо TokyoDash!»</p>
+      <div class="review-author">
+        <div class="review-avatar">С</div>
+        <div>
+          <div class="review-name">Сабина Т.</div>
+          <div class="review-date">3 недели назад</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- АКЦИИ -->
+<section class="section section-light" id="promo">
+  <h2 class="section-title reveal">Акции</h2>
+  <p class="section-subtitle reveal">Постоянные и сезонные акции со скидками от 7 до 50 %. Следите за обновлениями!</p>
+  <div class="promo-slider reveal">
+    <button class="slider-btn" onclick="prevSlide()">&#8249;</button>
+    <div class="promo-card">
+      <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=500&q=80" alt="акция" class="promo-img" id="promoImg"/>
+      <div class="promo-text">
+        <div class="promo-badge" id="promoBadge">-10%</div>
+        <h3 id="promoTitle">Сделайте заказ на 4000 тг. и получите скидку 10%!</h3>
+        <p id="promoDesc">Скидка распространяется на все меню и действует с 11:00 до 13:00 каждый день.</p>
+        <button class="btn-primary" style="margin-top:16px" onclick="openModal()">Воспользоваться</button>
+      </div>
+    </div>
+    <button class="slider-btn" onclick="nextSlide()">&#8250;</button>
+  </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section class="contacts-section" id="contacts">
+  <div class="contacts-inner">
+    <div>
+      <div class="contact-logo">Tokyo<span>Dash</span></div>
+      <div class="contact-phone">+7 700 042 0991</div>
+      <div class="contact-site">TokyoDash.Sushi.com</div>
+      <div class="contact-info">
+        Работаем ежедневно с 11.00 до 00.00<br>
+        Заказы принимаются до 23.00.<br>
+        Доставляем в течение 60 минут!<br>
+        Оплата на сайте или курьеру.
+      </div>
+      <div class="social-links">
+        <a class="social-link" href="https://wa.me/87053174471" target="_blank" title="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a class="social-link" href="https://instagram.com/thetasbolat" target="_blank" title="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a class="social-link" href="https://t.me/thetasbolat" target="_blank" title="Telegram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="map-placeholder">
+      <div class="map-inner">
+        <div class="map-pin">📍</div>
+        <div>Павлодар, Казахстан</div>
+        <div style="font-size:13px;color:#aaa;margin-top:4px">Доставка по всему городу</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-text">© 2026 TokyoDash. Все права защищены. Доставка ежедневно 11:00 — 00:00</div>
+</footer>
+
+<!-- CART BAR -->
+<div class="cart-bar" id="cartBar">
+  <div class="cart-icon-wrap">
+    🛒
+    <div class="cart-count" id="cartCount">0</div>
+  </div>
+  <div class="cart-total" id="cartTotal">= 0 тг.</div>
+  <button class="cart-checkout" onclick="openModal()">Оформить заказ</button>
+</div>
+
+<!-- ORDER MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title">🍣 Оформить заказ</div>
+    <div class="modal-subtitle">Выберите удобный способ связи</div>
+
+    <div class="modal-cart" id="modalCart"></div>
+    <div class="modal-total" id="modalTotalText"></div>
+
+    <div class="modal-btns">
+      <a class="modal-btn modal-btn-wa" id="waLink" href="#" target="_blank">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Написать в WhatsApp
+      </a>
+      <a class="modal-btn modal-btn-ig" id="igLink" href="https://instagram.com/thetasbolat" target="_blank">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Написать в Instagram
+      </a>
+    </div>
+    <div class="modal-note">Мы ответим в течение нескольких минут и уточним детали заказа 🙂</div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
